@@ -35,7 +35,7 @@ body {
     radial-gradient(at 0% 0%, rgb(174, 0, 255), transparent 75%),
     radial-gradient(at 50% 100%, rgb(255, 217, 0), transparent 50%)
       rgb(204, 36, 100);
-      
+
   background-clip: text;
 
   color: transparent;
@@ -43,4 +43,23 @@ body {
 
 button {
   cursor: pointer;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.cardAnimatedBorder {
+  background:
+    linear-gradient(50deg, var(--color-gray-700), var(--color-gray-900)) padding-box,
+    linear-gradient(var(--angle), #7340ff, #2d0192, #7340ff) border-box;
+  background-clip: padding-box, border-box;
+
+  animation: rotateAnim infinite linear 5s;
+}
+@keyframes rotateAnim {
+  to {
+    --angle: 360deg;
+  }
 }

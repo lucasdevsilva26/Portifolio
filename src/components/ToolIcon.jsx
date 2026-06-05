@@ -1,4 +1,4 @@
-function ToolIcon({ icon }) {
+function ToolIcon({ icon, setLoading }) {
   const icons = [
     {
       name: "HTML",
@@ -33,7 +33,16 @@ function ToolIcon({ icon }) {
   ];
 
   return (
-    <button className={icons[icon].container + ` bg-white scale-95 hover:scale-100 hover:brightness-75 duration-500 `} onClick={() => window.location.href = icons[icon].link}>
+    <button
+      className={
+        icons[icon].container +
+        ` bg-white scale-95 hover:scale-100 hover:brightness-75 duration-500 `
+      }
+      onClick={() => {
+        setLoading(true)
+        window.location.href = icons[icon].link;
+      }}
+    >
       <i className={icons[icon].icon}></i>
       {icons[icon].name}
     </button>

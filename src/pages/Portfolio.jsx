@@ -1,4 +1,6 @@
+import { useState } from "react";
 import profileImage from "../assets/images/profileImage.png";
+import Loading from "../components/Loading";
 import ProjectList from "../components/ProjectList";
 
 function Portfolio() {
@@ -20,12 +22,14 @@ function Portfolio() {
       link: "https://orgrise.vercel.app",
     },
   ];
+  const [loading, setLoading] = useState(false)
 
   return (
     <section
       className={`flex flex-col items-center gap-10 w-full h-full
       text-white relative `}
     >
+      <Loading loading={loading}></Loading>
       <header className={` flex flex-col items-center w-full `}>
         <div
           id="background"
@@ -40,17 +44,13 @@ function Portfolio() {
             className={` flex flex-col items-center justify-center bg-linear-to-t from-black to-transparent w-full h-full `}
           >
             <div
-              className={` relative w-3/7 aspect-square overflow-hidden rounded-full my-4 `}
+              className={` relative w-3/7 aspect-square overflow-hidden rounded-full my-4 ` +
+                " cardAnimatedBorder border-4 border-transparent "}
             >
-              <div
-                id="border"
-                className={` w-4/1 h-4/1 absolute top-1/2 left-1/2 -translate-1/2 z-0 animate-[spin_4s_linear_infinite_reverse]`}
-              ></div>
-
               <img
                 src={profileImage}
                 alt=""
-                className={` w-96/100 h-96/100 rounded-full absolute top-1/2 left-1/2 -translate-1/2 `}
+                className={` w-full h-gull rounded-full absolute top-1/2 left-1/2 -translate-1/2 `}
               />
             </div>
 
@@ -62,7 +62,7 @@ function Portfolio() {
       </header>
 
       <main className={` flex flex-col items-center gap-10 flex-2/4 w-full `}>
-        <ProjectList projects={projects}></ProjectList>
+        <ProjectList projects={projects} setLoading={setLoading}></ProjectList>
       </main>
 
       <footer
