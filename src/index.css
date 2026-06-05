@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 body {
+  display: flex;
   margin: 0;
 }
 
 #root {
   width: 100%;
-  min-height: 100svh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -22,9 +22,21 @@ body {
     radial-gradient(at 0% 100%, #311990, transparent 50%), #0b071d;
 }
 #border {
-  background: linear-gradient(#ae00ff, #0062ff, #ff0000, #ffe100);
+  background: linear-gradient(#2d0192, #7340ff, #2d0192, #7340ff, #2d0192);
 }
 #bgImage {
   background-image: url("/src/assets/images/bgImage.jpg");
   background-size: cover;
+}
+
+.instagram {
+  background:
+    radial-gradient(at 0% 0%, rgb(0, 47, 255), transparent 40%),
+    radial-gradient(at 0% 0%, rgb(174, 0, 255), transparent 75%),
+    radial-gradient(at 50% 100%, rgb(255, 217, 0), transparent 50%)
+      rgb(204, 36, 100);
+      
+  background-clip: text;
+
+  color: transparent;
 }
