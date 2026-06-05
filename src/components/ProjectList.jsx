@@ -11,8 +11,7 @@ function ProjectList({ projects }) {
         {projects.map((project) => {
           return (
             <article
-              className={` flex w-full h-84 py-5 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden cursor-pointer `}
-              onClick={() => (window.location.href = "https://" + project.link)}
+              className={` flex w-full h-87 py-5 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden`}
             >
               <div
                 id="border"
@@ -20,9 +19,9 @@ function ProjectList({ projects }) {
               ></div>
 
               <section
-                className={` flex flex-col w-full scale-98 bg-linear-9 from-gray-700 to-gray-900  absolute top-1/2 left-1/2 -translate-1/2 p-4 z-1 rounded-2xl overflow-hidden`}
+                className={` flex flex-col gap-4 w-full scale-98 bg-linear-9 from-gray-700 to-gray-900  absolute top-1/2 left-1/2 -translate-1/2 p-4 z-1 rounded-2xl overflow-hidden`}
               >
-                <div className={` flex h-max pb-5`}>
+                <div className={` flex gap-2 h-max p-2 bg-gray-700 rounded-xl scale-98 hover:scale-100 hover:brightness-125 duration-500 cursor-pointer `} onClick={() => (window.location.href = project.link)}>
                   <div
                     className={` flex-1 flex flex-col items-center justify-center z-2 `}
                   >
@@ -37,6 +36,10 @@ function ProjectList({ projects }) {
                       {project.description}
                     </p>
                   </div>
+
+                  <i
+                  className={` fas fa-arrow-trend-up absolute top-0 right-0 -translate-x-full translate-y-full text-2xl z-2`}
+                ></i>
                 </div>
 
                 <nav
@@ -49,10 +52,6 @@ function ProjectList({ projects }) {
                   <ToolIcon icon={3}></ToolIcon>
                   <ToolIcon icon={4}></ToolIcon>
                 </nav>
-
-                <i
-                  className={` fas fa-arrow-trend-up absolute right-0 -translate-x-1/2 translate-y-1/2 text-2xl z-2`}
-                ></i>
               </section>
             </article>
           );

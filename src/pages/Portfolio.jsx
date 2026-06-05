@@ -9,7 +9,7 @@ function Portfolio() {
       description:
         "Um site que replica o sistema de uma calculadora de celular criado durante uma aula no Senac após solicitação do professor.",
       tools: ["html", "css", "js", "reactjs", "tailwind"],
-      link: "calculator-lucasdev.vercel.app",
+      link: "https://calculator-lucasdev.vercel.app",
     },
     {
       icon: "fas fa-boxes-stacked",
@@ -17,7 +17,7 @@ function Portfolio() {
       description:
         "Um site focado na organicação e gerenciamento de estoque criado durante um trabalho em grupo no Senac após solicitação do professor.",
       tools: ["html", "css", "js", "reactjs", "tailwind"],
-      link: "orgrise.vercel.app",
+      link: "https://orgrise.vercel.app",
     },
   ];
 
