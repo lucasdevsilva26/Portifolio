@@ -74,6 +74,7 @@ function Portfolio() {
           <button
             className={` flex items-center justify-center aspect-square rounded-full  border-2 border-indigo-600 p-1 scale-90 hover:scale-100 duration-500 `}
             onClick={() => {
+              setLoading(true)
               window.location.href = "https://github.com/lucasdevsilva26";
             }}
           >
@@ -83,6 +84,7 @@ function Portfolio() {
           <button
             className={` flex items-center justify-center aspect-square rounded-full  border-2 border-pink-600 p-1 instagram scale-90 hover:scale-100 duration-500 `}
             onClick={() => {
+              setLoading(true)
               window.location.href = "https://www.instagram.com/lucassilvaz18/";
             }}
           >
@@ -92,6 +94,7 @@ function Portfolio() {
           <button
             className={` flex items-center justify-center aspect-square rounded-full  border-2 border-red-600 p-1 scale-90 hover:scale-100 duration-500 `}
             onClick={() => {
+              setLoading(true)
               window.location.href =
                 "https://www.youtube.com/@LucasFerreiraSilva-h3t";
             }}
