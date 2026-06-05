@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
 import profileImage from "../assets/images/profileImage.jpeg";
 import ToolIcon from "../components/ToolIcon";
+
+import bgImage from "../assets/images/bgImage.jpg";
 
 function Portfolio() {
   const projects = [
@@ -25,55 +26,63 @@ function Portfolio() {
   return (
     <section
       className={`flex flex-col items-center gap-10 w-full h-full
-        py-10 text-white `}
+      text-white `}
     >
       <div
-      id="background"
-        className={` w-3/1 h-3/1 fixed top-1/2 left-1/2 -translate-1/2 z-0 animate-[spin_10s_linear_infinite]`}
+        id="background"
+        className={` w-3/1 h-3/1 fixed top-1/2 left-1/2 -translate-1/2 z-0 animate-[spin_25s_linear_infinite]`}
       ></div>
 
-      <div className={` flex flex-col items-center z-1 `}>
-        <img
-          src={profileImage}
-          alt=""
-          className={` aspect-square h-50 rounded-full border-2 shadow-white `}
-        />
+      <div
+        id="bgImage"
+        className={` flex flex-col items-center justify-center z-1 w-full h-75 border-b-2 border-b-indigo-600`}
+      >
+        <div
+          className={` flex flex-col items-center justify-center bg-linear-to-t from-black to-transparent w-full h-full `}
+        >
+          <img
+            src={profileImage}
+            alt=""
+            className={` aspect-square h-50 rounded-full border-3 border-indigo-500`}
+          />
 
-        <h1 className={` text-4xl font-bold `}>Lucas Ferreira Silva</h1>
-        <p className={` text-2xl `}>Desenvolvedor</p>
+          <span className={` text-4xl font-bold `}>Lucas Ferreira Silva</span>
+        </div>
       </div>
 
-      <div className={` flex flex-col z-1 gap-6 `}>
+        <h1 className={` z-1 text-3xl font-bold `}>Meus Projetos</h1>
+
+      <div className={` flex flex-col items-center z-1 gap-6 w-full px-4 lg:flex-row `}>
         {projects.map((project) => {
           return (
             <article
-              className={` flex w-200 h-max py-5 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden `}
+              className={` flex w-full h-full py-5 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden `}
               onClick={() => (window.location.href = "https://" + project.link)}
             >
               <div
-              id="border"
+                id="border"
                 className={` w-4/1 h-4/1 absolute top-1/2 left-1/2 -translate-1/2 z-0 animate-[spin_4s_linear_infinite_reverse]`}
               ></div>
 
               <div
-                className={` w-full h-full scale-x-99 scale-y-97 bg-linear-130 from-gray-700 to-gray-800  absolute top-1/2 left-1/2 -translate-1/2 z-1 rounded-2xl`}
+                className={` w-full h-full scale-x-99 scale-y-97 bg-linear-9 from-gray-700 to-gray-900  absolute top-1/2 left-1/2 -translate-1/2 z-1 rounded-2xl`}
               ></div>
 
               <div
-                className={` flex flex-col items-center justify-center w-1/4 z-2 `}
+                className={` flex flex-col items-center w-1/4 z-2 mt-5 `}
               >
                 <i className={` ${project.icon} text-8xl z-1 `}></i>
               </div>
 
               <div
-                className={` flex flex-col w-1/1 h-full py-8 text-justify z-2 `}
+                className={` flex flex-col w-3/4 h-full py-8 text-justify z-2 `}
               >
                 <h1 className={` text-4xl font-bold `}>{project.title}</h1>
-                <p className={` pl-3 pt-2 w-8/10 `}>{project.description}</p>
+                <p className={` pl-3 pt-2 w-9/10 text-wrap `}>{project.description}</p>
 
                 <div
-                  className={` flex items-center w-max h-10 mt-3
-                 bg-gray-200 rounded-full `}
+                  className={` flex flex-wrap items-center justify-left w-9/10 mt-3
+                 bg-gray-900 rounded-xl `}
                 >
                   <ToolIcon icon={0}></ToolIcon>
                   <ToolIcon icon={1}></ToolIcon>
@@ -90,6 +99,8 @@ function Portfolio() {
           );
         })}
       </div>
+
+        <h1 className={` text-3xl font-bold z-1`}>Redes Sociais</h1>
 
       <div></div>
     </section>

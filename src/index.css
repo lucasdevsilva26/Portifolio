@@ -6,7 +6,7 @@ body {
 
 #root {
   width: 100%;
-  height: 100svh;
+  min-height: 100svh;
 
   margin: 0 auto;
   text-align: center;
@@ -18,9 +18,13 @@ body {
 
 #background {
   background:
-    radial-gradient(at 100% 0%, #3314b0, transparent 50%),
+    radial-gradient(at 90% 10%, #3314b0, transparent 50%),
     radial-gradient(at 0% 100%, #311990, transparent 50%), #0b071d;
 }
 #border {
   background: linear-gradient(#ae00ff, #0062ff, #ff0000, #ffe100);
+}
+#bgImage {
+  background-image: url("/src/assets/images/bgImage.jpg");
+  background-size: cover;
 }

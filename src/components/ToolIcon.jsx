@@ -8,7 +8,7 @@ function ToolIcon({ icon }) {
     {
       name: "CSS",
       container:
-        "w-max m-2 p-2 rounded-4xl text-blue-400 font-bold hue-rotate-45 brightness-90",
+        "w-max m-2 p-2 rounded-4xl text-purple-400 font-bold ",
       icon: "fab fa-css",
     },
     {
@@ -29,7 +29,7 @@ function ToolIcon({ icon }) {
   ];
 
   return (
-    <div className={icons[icon].container}>
+    <div className={icons[icon].container + ` bg-white `}>
       <i className={icons[icon].icon}></i>
       {icons[icon].name}
     </div>
