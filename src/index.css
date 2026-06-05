@@ -40,3 +40,7 @@ body {
 
   color: transparent;
 }
+
+button {
+  cursor: pointer;
+}

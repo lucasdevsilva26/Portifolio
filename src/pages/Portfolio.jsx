@@ -34,13 +34,13 @@ function Portfolio() {
 
         <div
           id="bgImage"
-          className={` flex flex-col items-center justify-center z-1 w-full h-75 border-b-2 border-b-indigo-600`}
+          className={` flex flex-col items-center justify-center z-1 w-full border-b-2 border-b-indigo-600`}
         >
           <div
             className={` flex flex-col items-center justify-center bg-linear-to-t from-black to-transparent w-full h-full `}
           >
             <div
-              className={` relative w-50 h-50 overflow-hidden rounded-full `}
+              className={` relative w-3/7 aspect-square overflow-hidden rounded-full my-4 `}
             >
               <div
                 id="border"
@@ -54,12 +54,12 @@ function Portfolio() {
               />
             </div>
 
-            <span className={` text-4xl font-bold `}>Lucas Ferreira Silva</span>
+            <span className={` text-4xl font-bold mb-7 `}>Lucas Ferreira Silva</span>
           </div>
         </div>
       </header>
 
-      <main className={` flex flex-col items-center gap-10 flex-1 w-full `}>
+      <main className={` flex flex-col items-center gap-10 flex-2/4 w-full `}>
         <h1 className={` z-1 text-3xl font-bold `}>Meus Projetos</h1>
 
         <div
@@ -68,7 +68,7 @@ function Portfolio() {
           {projects.map((project) => {
             return (
               <article
-                className={` flex w-full h-full py-5 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden `}
+                className={` flex w-full h-full py-5 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden cursor-pointer `}
                 onClick={() =>
                   (window.location.href = "https://" + project.link)
                 }
