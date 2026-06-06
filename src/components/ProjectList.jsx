@@ -3,9 +3,14 @@ import ToolIcon from "./ToolIcon";
 function ProjectList({ projects, setLoading }) {
   return (
     <>
-      <div className={` flex flex-col gap-2 text-center text-xl z-1 `}>
+      <div
+        className={
+          ` flex flex-col gap-2 py-4 bg-linear-0 from-gray-900/75 to-gray-800/75 text-center text-xl relative ` +
+          " gradientBorder before:py-1 "
+        }
+      >
         <h1 className={` z- text-4xl font-bold `}>MEUS PROJETOS</h1>
-        <span className={` flex items-center gap-1 z-1 `}>
+        <span className={` flex items-center justify-center gap-1 px-5 `}>
           <i className={` fas fa-triangle-exclamation text-amber-400 `}></i>
           Clique no projeto para ser redirecionado
           <i className={` fas fa-triangle-exclamation text-amber-400`}></i>
@@ -13,7 +18,7 @@ function ProjectList({ projects, setLoading }) {
       </div>
 
       <div
-        className={` flex flex-col lg:flex-row items-center gap-6 w-full px-2 z-1`}
+        className={` flex flex-col lg:flex-row items-center gap-6 w-full px-2`}
       >
         {projects.map((project) => {
           return (
@@ -35,7 +40,7 @@ function ProjectList({ projects, setLoading }) {
                   className={` flex-1 flex flex-col items-center  justify-center z-2 `}
                 >
                   <i
-                    className={` flex ${project.icon} py-6 bg-gray-600 ${project.color} text-8xl rounded-2xl z-1 `}
+                    className={` flex ${project.icon} py-6 bg-gray-600 ${project.color} text-8xl rounded-2xl `}
                   ></i>
                 </div>
 

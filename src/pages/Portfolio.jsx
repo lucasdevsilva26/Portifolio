@@ -58,7 +58,7 @@ function Portfolio() {
         className={` flex flex-col items-center gap-10 py-6 flex-2/4 w-full relative `}
       >
         <div
-          className={` w-full h-full scale-500 gradientBg absolute top-1/2 left-1/2 -translate-1/2 -z-100 `}
+          className={` w-5/1 pt-[500%] gradientBg fixed top-1/2 left-1/2 -translate-1/2 -z-100 `}
         ></div>
 
         <div className={` flex flex-col items-center gap-5 `}>
@@ -66,16 +66,16 @@ function Portfolio() {
 
           <div
             className={
-              ` flex flex-col items-center max-w-175 h-full p-5 mx-10 rounded-2xl bg-linear-45 from-gray-800/75 to-gray-950/75 relative ` +
+              ` flex flex-col items-center max-w-175 h-full p-5 mx-5 rounded-2xl bg-linear-45 from-gray-800/75 to-gray-950/75 relative ` +
               " gradientBorder before:p-2 before:hue-rotate-55 "
             }
           >
             <p className={` w-full text-2xl text-justify `}>
-              Sou estudante do curso Técnico em Informática para Internet e
-              apaixonado por tecnologia e programação. Busco constantemente
-              expandir meus conhecimentos de forma autodidata por meio de
-              documentações, projetos práticos e conteúdos educacionais no
-              YouTube. Gosto de desenvolver diferentes tipos de projetos,
+              Sou estudante do curso Técnico em Informática para Internet no
+              Senac e apaixonado por tecnologia e programação. Busco
+              constantemente expandir meus conhecimentos de forma autodidata por
+              meio de documentações, projetos práticos e conteúdos educacionais
+              no YouTube. Gosto de desenvolver diferentes tipos de projetos,
               incluindo sites, programas e jogos, aplicando criatividade e
               lógica para transformar ideias em soluções funcionais.
             </p>

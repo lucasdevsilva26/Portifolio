@@ -59,7 +59,7 @@ button {
     radial-gradient(at 90% 0%, #1121b6, transparent 50%),
     radial-gradient(at 0% 90%, #901968, transparent 50%),
     radial-gradient(at 50% 50%, #24014d, transparent 25%), #040111;
-  animation: rotateAnim infinite linear 10s reverse;
+  animation: rotateAnim infinite linear 5s reverse;
 }
 
 .instagram {
