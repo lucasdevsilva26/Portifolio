@@ -28,7 +28,7 @@ function ProjectList({ projects, setLoading }) {
                   className={` flex-1 flex flex-col items-center justify-center z-2 `}
                 >
                   <i
-                    className={` flex ${project.icon} py-6 bg-gray-600 text-8xl rounded-2xl z-1 `}
+                    className={` flex ${project.icon} py-6 bg-gray-600 ${project.color} text-8xl rounded-2xl z-1 `}
                   ></i>
                 </div>
 

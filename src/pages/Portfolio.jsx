@@ -7,6 +7,7 @@ function Portfolio() {
   const projects = [
     {
       icon: "fas fa-calculator",
+      color: "text-green-500",
       title: "Calculadora",
       description:
         "Um site que replica o sistema de uma calculadora de celular criado durante uma aula no Senac após solicitação do professor.",
@@ -15,6 +16,7 @@ function Portfolio() {
     },
     {
       icon: "fas fa-boxes-stacked",
+      color: "text-blue-500",
       title: "Orgrise",
       description:
         "Um site focado na organicação e gerenciamento de estoque criado durante um trabalho em grupo no Senac após solicitação do professor.",
@@ -22,11 +24,11 @@ function Portfolio() {
       link: "https://orgrise.vercel.app",
     },
   ];
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   return (
     <section
-      className={`flex flex-col items-center gap-10 w-full h-full
+      className={`flex flex-col items-center w-full h-full
       text-white relative `}
     >
       <Loading loading={loading}></Loading>
@@ -44,13 +46,15 @@ function Portfolio() {
             className={` flex flex-col items-center justify-center bg-linear-to-t from-black to-transparent w-full h-full `}
           >
             <div
-              className={` relative w-3/7 aspect-square overflow-hidden rounded-full my-4 ` +
-                " cardAnimatedBorder border-4 border-transparent "}
+              className={
+                ` relative w-50 max-w-75 aspect-square overflow-hidden rounded-full my-4 ` +
+                " cardAnimatedBorder border-4 border-transparent "
+              }
             >
               <img
                 src={profileImage}
                 alt=""
-                className={` w-full h-gull rounded-full absolute top-1/2 left-1/2 -translate-1/2 `}
+                className={` w-full h-full rounded-full absolute top-1/2 left-1/2 -translate-1/2 `}
               />
             </div>
 
@@ -62,6 +66,19 @@ function Portfolio() {
       </header>
 
       <main className={` flex flex-col items-center gap-10 flex-2/4 w-full `}>
+        <div
+          className={` flex flex-col items-center max-w-150 h-full p-5 mt-10 mx-10 rounded-4xl border-2 border-indigo-700 bg-gray-800/70 z-1 `}
+        >
+          <p className={` w-full text-2xl text-justify `}>
+            Sou estudante do curso Técnico em Informática para Internet e
+            apaixonado por tecnologia e programação. Busco constantemente
+            expandir meus conhecimentos de forma autodidata por meio de
+            documentações, projetos práticos e conteúdos educacionais no
+            YouTube. Gosto de desenvolver diferentes tipos de projetos,
+            incluindo sites, programas e jogos, aplicando criatividade e lógica
+            para transformar ideias em soluções funcionais.
+          </p>
+        </div>
         <ProjectList projects={projects} setLoading={setLoading}></ProjectList>
       </main>
 
@@ -74,7 +91,7 @@ function Portfolio() {
           <button
             className={` flex items-center justify-center aspect-square rounded-full  border-2 border-indigo-600 p-1 scale-90 hover:scale-100 duration-500 `}
             onClick={() => {
-              setLoading(true)
+              setLoading(true);
               window.location.href = "https://github.com/lucasdevsilva26";
             }}
           >
@@ -84,7 +101,7 @@ function Portfolio() {
           <button
             className={` flex items-center justify-center aspect-square rounded-full  border-2 border-pink-600 p-1 instagram scale-90 hover:scale-100 duration-500 `}
             onClick={() => {
-              setLoading(true)
+              setLoading(true);
               window.location.href = "https://www.instagram.com/lucassilvaz18/";
             }}
           >
@@ -94,7 +111,7 @@ function Portfolio() {
           <button
             className={` flex items-center justify-center aspect-square rounded-full  border-2 border-red-600 p-1 scale-90 hover:scale-100 duration-500 `}
             onClick={() => {
-              setLoading(true)
+              setLoading(true);
               window.location.href =
                 "https://www.youtube.com/@LucasFerreiraSilva-h3t";
             }}
