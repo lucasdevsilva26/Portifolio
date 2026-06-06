@@ -33,16 +33,8 @@ button {
   }
 }
 
-.instagram {
-  background:
-    radial-gradient(at 0% 0%, rgb(0, 47, 255), transparent 40%),
-    radial-gradient(at 0% 0%, rgb(174, 0, 255), transparent 75%),
-    radial-gradient(at 50% 100%, rgb(255, 217, 0), transparent 50%)
-      rgb(204, 36, 100);
-
-  background-clip: text;
-
-  color: transparent;
+.bgImage1 {
+  background-image: url("/src/assets/images/bgImage.jpg");
 }
 
 .gradientBorder::before {
@@ -68,4 +60,16 @@ button {
     radial-gradient(at 0% 90%, #901968, transparent 50%),
     radial-gradient(at 50% 50%, #24014d, transparent 25%), #040111;
   animation: rotateAnim infinite linear 10s reverse;
+}
+
+.instagram {
+  background:
+    radial-gradient(at 0% 0%, rgb(0, 47, 255), transparent 40%),
+    radial-gradient(at 0% 0%, rgb(174, 0, 255), transparent 75%),
+    radial-gradient(at 50% 100%, rgb(255, 217, 0), transparent 50%)
+      rgb(204, 36, 100);
+
+  background-clip: text;
+
+  color: transparent;
 }
