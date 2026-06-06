@@ -3,26 +3,33 @@ import ToolIcon from "./ToolIcon";
 function ProjectList({ projects, setLoading }) {
   return (
     <>
-      <h1 className={` z-1 text-3xl font-bold `}>Meus Projetos</h1>
+      <div className={` flex flex-col gap-2 text-center text-xl z-1 `}>
+        <h1 className={` z- text-4xl font-bold `}>MEUS PROJETOS</h1>
+        <span className={` flex items-center gap-1 z-1 `}>
+          <i className={` fas fa-triangle-exclamation text-amber-400 `}></i>
+          Clique no projeto para ser redirecionado
+          <i className={` fas fa-triangle-exclamation text-amber-400`}></i>
+        </span>
+      </div>
 
       <div
-        className={` flex flex-col lg:flex-row items-center gap-6 w-full px-2 z-1 `}
+        className={` flex flex-col lg:flex-row items-center gap-6 w-full px-2 z-1`}
       >
         {projects.map((project) => {
           return (
             <article
               key={crypto.randomUUID()}
               className={
-                ` flex flex-col w-full max-w-110 h-87 p-2 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden ` +
+                ` flex flex-col w-full max-w-110 h-87 p-2 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-115 duration-500 overflow-hidden ` +
                 " cardAnimatedBorder border-4 border-transparent "
               }
+              onClick={() => {
+                setLoading(true);
+                window.location.href = project.link;
+              }}
             >
               <div
-                className={` flex gap-2 h-full p-2 bg-gray-700 rounded-xl scale-98 hover:scale-100 hover:brightness-125 duration-500 cursor-pointer `}
-                onClick={() => {
-                  setLoading(true);
-                  window.location.href = project.link;
-                }}
+                className={` flex gap-2 h-full p-2 bg-gray-700 rounded-xl cursor-pointer `}
               >
                 <div
                   className={` flex-1 flex flex-col items-center justify-center z-2 `}

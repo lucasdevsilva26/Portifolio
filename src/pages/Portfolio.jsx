@@ -65,19 +65,31 @@ function Portfolio() {
         </div>
       </header>
 
-      <main className={` flex flex-col items-center gap-10 flex-2/4 w-full `}>
-        <div
-          className={` flex flex-col items-center max-w-150 h-full p-5 mt-10 mx-10 rounded-4xl border-2 border-indigo-700 bg-gray-800/70 z-1 `}
-        >
-          <p className={` w-full text-2xl text-justify `}>
-            Sou estudante do curso Técnico em Informática para Internet e
-            apaixonado por tecnologia e programação. Busco constantemente
-            expandir meus conhecimentos de forma autodidata por meio de
-            documentações, projetos práticos e conteúdos educacionais no
-            YouTube. Gosto de desenvolver diferentes tipos de projetos,
-            incluindo sites, programas e jogos, aplicando criatividade e lógica
-            para transformar ideias em soluções funcionais.
-          </p>
+      <main
+        className={` flex flex-col items-center gap-10 my-6 flex-2/4 w-full `}
+      >
+        <div className={` flex flex-col items-center gap-5 z-1 `}>
+          <h1 className={` text-5xl font-bold z-1 `}>QUEM SOU EU?</h1>
+          <div
+            className={` flex flex-col items-center max-w-150 h-full p-5 mx-10 rounded-2xl border-2 border-indigo-700 bg-gray-800/70 z-1 relative `}
+          >
+            <p className={` w-full text-2xl text-justify `}>
+              Sou estudante do curso Técnico em Informática para Internet e
+              apaixonado por tecnologia e programação. Busco constantemente
+              expandir meus conhecimentos de forma autodidata por meio de
+              documentações, projetos práticos e conteúdos educacionais no
+              YouTube. Gosto de desenvolver diferentes tipos de projetos,
+              incluindo sites, programas e jogos, aplicando criatividade e
+              lógica para transformar ideias em soluções funcionais.
+            </p>
+
+            <i
+              className={` fas fa-gamepad absolute top-0 left-0 -translate-1/2 text-2xl text-red-500 brightness-90 `}
+            ></i>
+            <i
+              className={` fas fa-laptop-code absolute top-full left-full -translate-1/2 text-2xl text-emerald-500 `}
+            ></i>
+          </div>
         </div>
         <ProjectList projects={projects} setLoading={setLoading}></ProjectList>
       </main>
