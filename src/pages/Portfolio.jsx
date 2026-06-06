@@ -32,46 +32,43 @@ function Portfolio() {
       text-white relative `}
     >
       <Loading loading={loading}></Loading>
-      <header className={` flex flex-col items-center w-full `}>
+      <header
+        className={` flex flex-col items-center w-full py-8 h-max bg-[url("src/assets/images/bgImage.jpg")] bg-cover bg-center relative saturate-150 contrast-115 `}
+      >
         <div
-          id="background"
-          className={` w-3/1 h-3/1 fixed top-1/2 left-1/2 -translate-1/2 z-0 animate-[spin_25s_linear_infinite]`}
+          className={
+            ` w-50 h-50 rounded-full saturate-70 contrast-85 relative z-1 ` +
+            " gradientBorder before:p-1.5 "
+          }
+        >
+          <img src={profileImage} alt="" />
+        </div>
+
+        <div
+          className={
+            ` w-full h-full absolute left-0 top-0 bg-linear-0 from-black to-70% ` +
+            " gradientBorder before:pb-1.5 "
+          }
         ></div>
 
-        <div
-          id="bgImage"
-          className={` flex flex-col items-center justify-center z-1 w-full border-b-2 border-b-indigo-600`}
-        >
-          <div
-            className={` flex flex-col items-center justify-center bg-linear-to-t from-black to-transparent w-full h-full `}
-          >
-            <div
-              className={
-                ` relative w-50 max-w-75 aspect-square overflow-hidden rounded-full my-4 ` +
-                " cardAnimatedBorder border-4 border-transparent "
-              }
-            >
-              <img
-                src={profileImage}
-                alt=""
-                className={` w-full h-full rounded-full absolute top-1/2 left-1/2 -translate-1/2 `}
-              />
-            </div>
-
-            <span className={` text-4xl font-bold mb-7 `}>
-              Lucas Ferreira Silva
-            </span>
-          </div>
-        </div>
+        <span className={` text-4xl font-bold z-1 `}>Lucas Ferreira Silva</span>
       </header>
 
       <main
-        className={` flex flex-col items-center gap-10 my-6 flex-2/4 w-full `}
+        className={` flex flex-col items-center gap-10 py-6 flex-2/4 w-full relative `}
       >
-        <div className={` flex flex-col items-center gap-5 z-1 `}>
-          <h1 className={` text-5xl font-bold z-1 `}>QUEM SOU EU?</h1>
+        <div
+          className={` w-full h-full scale-500 gradientBg absolute top-1/2 left-1/2 -translate-1/2 -z-100 `}
+        ></div>
+
+        <div className={` flex flex-col items-center gap-5 `}>
+          <h1 className={` text-5xl font-bold `}>QUEM SOU EU?</h1>
+
           <div
-            className={` flex flex-col items-center max-w-150 h-full p-5 mx-10 rounded-2xl border-2 border-indigo-700 bg-gray-800/70 z-1 relative `}
+            className={
+              ` flex flex-col items-center max-w-175 h-full p-5 mx-10 rounded-2xl bg-linear-45 from-gray-800/75 to-gray-950/75 relative ` +
+              " gradientBorder before:p-2 before:hue-rotate-55 "
+            }
           >
             <p className={` w-full text-2xl text-justify `}>
               Sou estudante do curso Técnico em Informática para Internet e
@@ -84,7 +81,7 @@ function Portfolio() {
             </p>
 
             <i
-              className={` fas fa-gamepad absolute top-0 left-0 -translate-1/2 text-2xl text-red-500 brightness-90 `}
+              className={` fas fa-gamepad absolute top-0 left-0 -translate-1/2 text-2xl text-blue-500 brightness-90 `}
             ></i>
             <i
               className={` fas fa-laptop-code absolute top-full left-full -translate-1/2 text-2xl text-emerald-500 `}
@@ -95,13 +92,19 @@ function Portfolio() {
       </main>
 
       <footer
-        className={` flex flex-col items-center justify-evenly gap-5 py-4 bg-linear-180 from-black to-transparent w-full border-t-2 border-indigo-600 z-1 `}
+        className={
+          ` flex flex-col items-center justify-evenly gap-5 py-4 bg-linear-180 from-black to-transparent from-20% w-full relative ` +
+          " gradientBorder before:pt-1.5 "
+        }
       >
         <h1 className={` text-3xl font-bold `}>Redes Sociais</h1>
 
-        <nav className={` flex gap-4 z-1 text-4xl `}>
+        <nav className={` flex gap-4 text-4xl `}>
           <button
-            className={` flex items-center justify-center aspect-square rounded-full  border-2 border-indigo-600 p-1 scale-90 hover:scale-100 duration-500 `}
+            className={
+              ` flex items-center justify-center aspect-square rounded-full p-1.5 scale-90 hover:scale-100 duration-500 ` +
+              " gradientBorder before:p-1 before:grayscale-100 before:brightness-1000 "
+            }
             onClick={() => {
               setLoading(true);
               window.location.href = "https://github.com/lucasdevsilva26";
@@ -111,7 +114,10 @@ function Portfolio() {
           </button>
 
           <button
-            className={` flex items-center justify-center aspect-square rounded-full  border-2 border-pink-600 p-1 instagram scale-90 hover:scale-100 duration-500 `}
+            className={
+              ` flex items-center justify-center aspect-square rounded-full p-1.5 instagram scale-90 hover:scale-100 duration-500 ` +
+              " gradientBorder before:p-1 before:hue-rotate-25 before:brightness-125 "
+            }
             onClick={() => {
               setLoading(true);
               window.location.href = "https://www.instagram.com/lucassilvaz18/";
@@ -121,7 +127,10 @@ function Portfolio() {
           </button>
 
           <button
-            className={` flex items-center justify-center aspect-square rounded-full  border-2 border-red-600 p-1 scale-90 hover:scale-100 duration-500 `}
+            className={
+              ` flex items-center justify-center aspect-square rounded-full p-1.5 scale-90 hover:scale-100 duration-500 ` +
+              " gradientBorder before:p-1 before:hue-rotate-80 before:brightness-125 "
+            }
             onClick={() => {
               setLoading(true);
               window.location.href =

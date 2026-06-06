@@ -1,4 +1,4 @@
-function ToolIcon({ icon, setLoading }) {
+function ToolIcon({ icon }) {
   const icons = [
     {
       name: "HTML",

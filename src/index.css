@@ -18,17 +18,19 @@ body {
   overflow: hidden;
 }
 
-#background {
-  background:
-    radial-gradient(at 90% 10%, #3314b0, transparent 50%),
-    radial-gradient(at 0% 100%, #311990, transparent 50%), #0b071d;
+button {
+  cursor: pointer;
 }
-#border {
-  background: linear-gradient(#2d0192, #7340ff, #2d0192, #7340ff, #2d0192);
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
 }
-#bgImage {
-  background-image: url("/src/assets/images/bgImage.jpg");
-  background-size: cover;
+@keyframes rotateAnim {
+  to {
+    --angle: 360deg;
+  }
 }
 
 .instagram {
@@ -43,25 +45,27 @@ body {
   color: transparent;
 }
 
-button {
-  cursor: pointer;
-}
+.gradientBorder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 
-@property --angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-.cardAnimatedBorder {
-  background:
-    linear-gradient(50deg, var(--color-gray-700), var(--color-gray-900)) padding-box,
-    linear-gradient(var(--angle), #7340ff, #2d0192, #7340ff) border-box;
-  background-clip: padding-box, border-box;
+  border-radius: inherit;
+
+  background: linear-gradient(var(--angle), #7340ff, #2d0192, #7340ff);
+  mask:
+    linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  mask-composite: exclude;
 
   animation: rotateAnim infinite linear 5s;
 }
-@keyframes rotateAnim {
-  to {
-    --angle: 360deg;
-  }
+
+.gradientBg {
+  rotate: var(--angle);
+  background:
+    radial-gradient(at 90% 0%, #1121b6, transparent 50%),
+    radial-gradient(at 0% 90%, #901968, transparent 50%),
+    radial-gradient(at 50% 50%, #24014d, transparent 25%), #040111;
+  animation: rotateAnim infinite linear 10s reverse;
 }
