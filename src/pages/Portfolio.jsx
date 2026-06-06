@@ -38,7 +38,7 @@ function Portfolio() {
         <div
           className={
             ` w-50 h-50 rounded-full saturate-70 contrast-85 relative z-1 ` +
-            " gradientBorder before:p-1.5 "
+            " gradientBorder before:p-1.5 before:-hue-rotate-50 before:brightness-100 "
           }
         >
           <img src={profileImage} alt="" />
