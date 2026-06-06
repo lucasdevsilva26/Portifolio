@@ -33,7 +33,7 @@ function Portfolio() {
     >
       <Loading loading={loading}></Loading>
       <header
-        className={` flex flex-col items-center w-full py-8 h-max bg-[url("src/assets/images/bgImage.jpg")] bg-cover bg-center relative saturate-150 contrast-115 `}
+        className={` flex flex-col items-center w-full py-8 h-max bg-[url("../src/assets/images/bgImage.jpg")] bg-cover bg-center relative saturate-150 contrast-115 `}
       >
         <div
           className={
