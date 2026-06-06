@@ -6,14 +6,14 @@ function ProjectList({ projects, setLoading }) {
       <h1 className={` z-1 text-3xl font-bold `}>Meus Projetos</h1>
 
       <div
-        className={` flex flex-col lg:flex-row items-center gap-6 w-full px-6 z-1 `}
+        className={` flex flex-col lg:flex-row items-center gap-6 w-full px-2 z-1 `}
       >
         {projects.map((project) => {
           return (
             <article
               key={crypto.randomUUID()}
               className={
-                ` flex flex-col w-110 h-87 p-2 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden ` +
+                ` flex flex-col w-full max-w-110 h-87 p-2 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-110 duration-500 overflow-hidden ` +
                 " cardAnimatedBorder border-4 border-transparent "
               }
             >
