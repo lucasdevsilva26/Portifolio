@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import profileImage from "../assets/images/profileImage.png";
 import Loading from "../components/Loading";
 import ProjectList from "../components/ProjectList";
@@ -25,6 +25,18 @@ function Portfolio() {
     },
   ];
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handlePageShow = (event) => {
+      if (event.persisted) setLoading(false);
+    };
+
+    window.addEventListener("pageshow", handlePageShow);
+
+    return () => {
+      window.removeEventListener("pageshow", handlePageShow);
+    };
+  });
 
   return (
     <section
