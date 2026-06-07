@@ -25,7 +25,7 @@ function ProjectList({ projects, setLoading }) {
             <article
               key={crypto.randomUUID()}
               className={
-                ` flex flex-col w-full max-w-100 h-100 p-3 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-115 duration-500 overflow-hidden bg-linear-45 from-gray-700 to-gray-900 ` +
+                ` flex flex-col w-full max-w-100 h-100 p-3 gap-2 rounded-2xl relative scale-95 hover:scale-100 hover:brightness-115 duration-500 overflow-hidden bg-linear-45 from-gray-700 to-gray-900 cursor-pointer ` +
                 " gradientBorder before:p-1.5 "
               }
               onClick={() => {
@@ -37,15 +37,29 @@ function ProjectList({ projects, setLoading }) {
                 className={` flex flex-col gap-2 h-full p-2 bg-gray-700 rounded-xl cursor-pointer `}
               >
                 <div
-                  className={` flex-1 flex items-center justify-center gap-2 `}
+                  className={` flex-1 flex flex-col items-center justify-center gap-2 `}
                 >
-                  <i
-                    className={` flex ${project.icon} ${project.color} text-3xl rounded-2xl `}
-                  ></i>
-                  <h1 className={` text-4xl font-bold `}>{project.title}</h1>
-                  <i
-                    className={` flex ${project.icon} ${project.color} text-3xl rounded-2xl `}
-                  ></i>
+                  <div className={` flex items-center gap-2 `}>
+                    <i
+                      className={` flex ${project.icon} ${project.color} text-3xl rounded-2xl `}
+                    ></i>
+                    <h1 className={` text-4xl font-bold `}>{project.title}</h1>
+                    <i
+                      className={` flex ${project.icon} ${project.color} text-3xl rounded-2xl `}
+                    ></i>
+                  </div>
+
+                  <span
+                    className={` items-center justify-center gap-1 px-5 font-bold text-amber-200 ${project.complete ? "hidden" : "flex"} `}
+                  >
+                    <i
+                      className={` fas fa-triangle-exclamation text-amber-400 `}
+                    ></i>
+                    EM PRODUÇÃO
+                    <i
+                      className={` fas fa-triangle-exclamation text-amber-400`}
+                    ></i>
+                  </span>
                 </div>
 
                 <div
